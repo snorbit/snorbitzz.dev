@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snorbitzz Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the active tab */
+        .nav-link.active {
+            color: #6366f1; /* indigo-500 */
+            border-bottom-color: #6366f1;
+        }
+        /* Simple transition for sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">
+                <a href="#home" class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.82m5.84-2.56a16.5 16.5 0 10-16.5 16.5H21a16.5 16.5 0 00-5.41-12.12z" />
+                    </svg>
+                    <span>Snorbitzz Development</span>
+                </a>
+            </h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="nav-link text-gray-300 hover:text-indigo-400 border-b-2 border-transparent pb-1 transition-colors duration-300 active" data-tab="home">Home</a>
+                <a href="#bots" class="nav-link text-gray-300 hover:text-indigo-400 border-b-2 border-transparent pb-1 transition-colors duration-300" data-tab="bots">Our Bots</a>
+                <a href="#terms" class="nav-link text-gray-300 hover:text-indigo-400 border-b-2 border-transparent pb-1 transition-colors duration-300" data-tab="terms">Terms of Service</a>
+                <a href="#privacy" class="nav-link text-gray-300 hover:text-indigo-400 border-b-2 border-transparent pb-1 transition-colors duration-300" data-tab="privacy">Privacy Policy</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-indigo-400 border-b-2 border-transparent pb-1 transition-colors duration-300">Support Server</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#home" class="nav-link block text-gray-300 hover:text-indigo-400" data-tab="home">Home</a>
+            <a href="#bots" class="nav-link block text-gray-300 hover:text-indigo-400" data-tab="bots">Our Bots</a>
+            <a href="#terms" class="nav-link block text-gray-300 hover:text-indigo-400" data-tab="terms">Terms of Service</a>
+            <a href="#privacy" class="nav-link block text-gray-300 hover:text-indigo-400" data-tab="privacy">Privacy Policy</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="block text-gray-300 hover:text-indigo-400">Support Server</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <!-- Home Section -->
+        <section id="home" class="content-section">
+            <div class="text-center">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Building the Future of <span class="text-indigo-500">Discord Automation</span>
+                </h2>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    Welcome to Snorbitzz Development. We are a passionate team of developers dedicated to creating high-quality, innovative, and reliable Discord bots to enhance your server experience.
+                </p>
+                <a href="#bots" data-tab-link="bots" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 duration-300 inline-block">
+                    Explore Our Bots
+                </a>
+            </div>
+            
+            <div class="mt-20 grid md:grid-cols-3 gap-10 text-center">
+                <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-white mb-3">Powerful Features</h3>
+                    <p class="text-gray-400">Our bots are packed with intuitive and powerful commands designed to make server management a breeze.</p>
+                </div>
+                 <div class="bg-gray-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold text-white mb-3">99.9% Uptime</h3>
+                    <p class="text-gray-400">We ensure our bots are always online and ready to serve your community, backed by reliable infrastructure.</p>
+                </div>
+                 <div class="bg-gray-800 p-8 rounded-lg flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-3">Community Support</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">Have a question or need help? Join our support server and get assistance from our friendly team.</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="mt-auto bg-gray-700 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Join Server</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bots Section -->
+        <section id="bots" class="content-section">
+             <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white">Our Creations</h2>
+                <p class="text-gray-400 mt-2">Here are some of the bots we've developed. Click invite to add them to your server!</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Bot Card 1 -->
+                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/100x100/1f2937/a78bfa?text=B1" alt="Bot 1 Logo" class="w-24 h-24 rounded-full mb-4 border-4 border-gray-700">
+                    <h3 class="text-xl font-bold text-white">Bot One</h3>
+                    <p class="text-gray-400 mt-2 mb-4 flex-grow">A powerful moderation bot to keep your server safe and clean. Features auto-moderation, logging, and more.</p>
+                    <a href="#" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Invite Bot</a>
+                </div>
+
+                <!-- Bot Card 2 -->
+                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/100x100/1f2937/a78bfa?text=B2" alt="Bot 2 Logo" class="w-24 h-24 rounded-full mb-4 border-4 border-gray-700">
+                    <h3 class="text-xl font-bold text-white">Bot Two</h3>
+                    <p class="text-gray-400 mt-2 mb-4 flex-grow">An engaging economy and game bot with leaderboards, mini-games, and customizable rewards.</p>
+                    <a href="#" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Invite Bot</a>
+                </div>
+
+                <!-- Bot Card 3 -->
+                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <img src="https://placehold.co/100x100/1f2937/a78bfa?text=B3" alt="Bot 3 Logo" class="w-24 h-24 rounded-full mb-4 border-4 border-gray-700">
+                    <h3 class="text-xl font-bold text-white">Bot Three</h3>
+                    <p class="text-gray-400 mt-2 mb-4 flex-grow">A utility bot that provides music, fun commands, and server information at your fingertips.</p>
+                    <a href="#" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-300">Invite Bot</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms of Service Section -->
+        <section id="terms" class="content-section">
+            <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg">
+                <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-700 pb-4">Terms of Service</h2>
+                <div class="prose prose-invert max-w-none text-gray-300 space-y-4">
+                    <p class="text-yellow-400 font-semibold">Please read these terms of service carefully. This is a template and should be replaced with your own official Terms of Service.</p>
+                    <p>Last updated: [Date]</p>
+                    
+                    <h3 class="text-xl text-white font-semibold">1. Acceptance of Terms</h3>
+                    <p>By inviting and using any Discord bot developed by Snorbitzz Development ("we", "us", "our"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not use our services.</p>
+
+                    <h3 class="text-xl text-white font-semibold">2. Use of Services</h3>
+                    <p>You agree to use our bots in compliance with the Discord Terms of Service and all applicable local, state, national, and international laws. You are responsible for all activities that occur under your server when using our bots.</p>
+                    
+                    <h3 class="text-xl text-white font-semibold">3. Prohibited Conduct</h3>
+                    <p>You may not use our services to:</p>
+                    <ul>
+                        <li>Engage in any activity that is illegal, harmful, or fraudulent.</li>
+                        <li>Harass, abuse, or harm another person or group.</li>
+                        <li>Violate the privacy of others.</li>
+                        <li>Attempt to disrupt or overload our services.</li>
+                    </ul>
+
+                    <h3 class="text-xl text-white font-semibold">4. Termination</h3>
+                    <p>We reserve the right to terminate or suspend access to our services for any server or user, without prior notice or liability, for any reason whatsoever, including a breach of these Terms.</p>
+                    
+                    <h3 class="text-xl text-white font-semibold">5. Changes to Terms</h3>
+                    <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms on this site.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="content-section">
+            <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg">
+                <h2 class="text-3xl font-bold text-white mb-6 border-b border-gray-700 pb-4">Privacy Policy</h2>
+                <div class="prose prose-invert max-w-none text-gray-300 space-y-4">
+                    <p class="text-yellow-400 font-semibold">Please read this privacy policy carefully. This is a template and should be replaced with your own official Privacy Policy, detailing the specific data your bots collect.</p>
+                    <p>Last updated: [Date]</p>
+                    
+                    <h3 class="text-xl text-white font-semibold">1. Information We Collect</h3>
+                    <p>Our bots may collect and store the following information to function correctly:</p>
+                    <ul>
+                        <li><strong>Server Information:</strong> Server ID, server settings for the bot.</li>
+                        <li><strong>User Information:</strong> User ID, usernames (for commands), user-provided data (e.g., in-game currency).</li>
+                        <li><strong>Channel Information:</strong> Channel IDs for logging or specific commands.</li>
+                    </ul>
+                    <p>We do not collect or store message content, email addresses, or any personally identifiable information unless explicitly provided by the user for a specific feature.</p>
+
+                    <h3 class="text-xl text-white font-semibold">2. How We Use Information</h3>
+                    <p>The data collected is used solely for the purpose of providing and improving the bot's features, such as moderation logs, economy systems, and user-specific settings.</p>
+
+                    <h3 class="text-xl text-white font-semibold">3. Data Sharing</h3>
+                    <p>We do not sell, trade, or otherwise transfer your data to outside parties. All data is stored securely and is only accessible by the Snorbitzz Development team for maintenance and support purposes.</p>
+
+                    <h3 class="text-xl text-white font-semibold">4. Data Retention</h3>
+                    <p>We retain collected data as long as the bot is in your server. If you remove the bot from your server, you may request the deletion of associated data by contacting us.</p>
+                    
+                    <h3 class="text-xl text-white font-semibold">5. Your Consent</h3>
+                    <p>By using our services, you consent to our privacy policy.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-16">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>&copy; 2024 Snorbitzz Development. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-indigo-400 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-indigo-400 transition-colors">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // --- Tab Switching Logic ---
+            function showTab(tabId) {
+                // Hide all sections
+                contentSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Show the target section
+                const activeSection = document.getElementById(tabId);
+                if (activeSection) {
+                    activeSection.style.display = 'block';
+                }
+
+                // Update active state on nav links
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.tab === tabId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Set initial tab based on hash or default to 'home'
+            const initialTab = window.location.hash.substring(1) || 'home';
+            showTab(initialTab);
+            
+            // Add click listeners to all nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const tabId = link.dataset.tab;
+                    showTab(tabId);
+                    window.history.pushState(null, null, `#${tabId}`);
+                    // Close mobile menu on click
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Add click listener to hero button
+            document.querySelectorAll('[data-tab-link]').forEach(button => {
+                button.addEventListener('click', (e) => {
+                     e.preventDefault();
+                    const tabId = button.dataset.tabLink;
+                    showTab(tabId);
+                    window.history.pushState(null, null, `#${tabId}`);
+                })
+            })
+
+            // --- Mobile Menu Toggle ---
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
